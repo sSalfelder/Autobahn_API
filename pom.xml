@@ -134,7 +134,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.github.ssalfelder.autobahn_api/com.github.ssalfelder.autobahn_api.HelloApplication
+                                com.github.ssalfelder.autobahn_api/com.github.ssalfelder.autobahn_api.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
