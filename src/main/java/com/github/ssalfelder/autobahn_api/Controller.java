@@ -1,14 +1,22 @@
 package com.github.ssalfelder.autobahn_api;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
 
-public class HelloController {
-    @FXML
-    private Label welcomeText;
+
+public class Controller {
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Button highwayButton;
+
+    public Node getDragNode() {
+        return highwayButton;
     }
+
+    @FXML
+    protected void onHighwayClicked() {
+
+    }
+
 }
