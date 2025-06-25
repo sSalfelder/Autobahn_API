@@ -5,10 +5,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/21.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ssalfelder.autobahn_api.Controller">
-    <Button mnemonicParsing="false" onAction="#onHighwayClicked" fx:id="highwayButton" style="-fx-background-color: transparent;">
+<VBox xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.github.ssalfelder.autobahn_api.Controller"
+      styleClass="root">
+    <Button mnemonicParsing="false" onAction="#onHighwayClicked" styleClass="hud-button" fx:id="highwayButton">
       <graphic>
-         <ImageView fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <ImageView styleClass="hud-image" fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../../autobahn.png" />
             </image>

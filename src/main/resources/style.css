@@ -1,0 +1,16 @@
+.root {
+    -fx-background-color: transparent;
+}
+
+.hud-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.hud-image {
+    -fx-background-color: transparent;
+    -fx-opacity: 0.4;
+}
