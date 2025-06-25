@@ -10,6 +10,8 @@ module com.github.ssalfelder.autobahn_api {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.net.http;
+    requires json.simple;
 
     opens com.github.ssalfelder.autobahn_api to javafx.fxml;
     exports com.github.ssalfelder.autobahn_api;
