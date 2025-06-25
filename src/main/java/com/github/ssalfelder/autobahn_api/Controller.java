@@ -14,10 +14,6 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    //TODO Textarea soll in der Mitte oben losgelöst vom Button auftauchen
-    //TODO Textarea soll transparent wie ein Heads-Up-Display Element sein
-    //TODO Das Click-event soll bei gedrückter Maustaste und verschieben des Buttons
-    // nicht ausgelöst werden
 
     @FXML
     private Button highwayButton;
