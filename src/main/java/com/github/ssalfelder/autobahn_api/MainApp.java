@@ -26,6 +26,7 @@ public class MainApp extends Application {
         stage.show();
 
         DraggableMaker.makeDraggable(stage, controller.getDragNode());
+        StartpositionInitializer.initializeStartPosition(stage);
     }
 
     public static void main(String[] args) {

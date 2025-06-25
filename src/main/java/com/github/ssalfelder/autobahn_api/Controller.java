@@ -16,7 +16,7 @@ public class Controller {
 
     @FXML
     protected void onHighwayClicked() {
-
+        System.out.println("Test");
     }
 
 }
