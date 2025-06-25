@@ -4,16 +4,28 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 
-<VBox alignment="TOP_RIGHT" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ssalfelder.autobahn_api.Controller">
-    <Button fx:id="highwayButton" mnemonicParsing="false" onAction="#onHighwayClicked" styleClass="hud-button">
-      <graphic>
-         <ImageView fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="hud-image">
-            <image>
-               <Image url="@../../../../autobahn.png" />
-            </image>
-         </ImageView>
-      </graphic></Button>
-   <TextArea fx:id="outputArea" prefHeight="200.0" prefWidth="200.0" />
-</VBox>
+<StackPane prefHeight="562.0" prefWidth="300.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ssalfelder.autobahn_api.Controller">
+
+   <TextArea fx:id="outputArea"
+             prefHeight="547.0"
+             prefWidth="528.0"
+             styleClass="hud-textarea"
+             wrapText="true"
+             StackPane.alignment="TOP_CENTER"
+             mouseTransparent="true" />
+
+    <HBox alignment="TOP_RIGHT" prefHeight="562.0" prefWidth="343.0" styleClass="vbox" StackPane.alignment="TOP_RIGHT">
+        <Button fx:id="highwayButton" mnemonicParsing="false" onAction="#onHighwayClicked" styleClass="hud-button">
+          <graphic>
+             <ImageView fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="hud-image">
+                <image>
+                   <Image url="@../../../../autobahn.png" />
+                </image>
+             </ImageView>
+          </graphic>
+        </Button>
+    </HBox>
+</StackPane>

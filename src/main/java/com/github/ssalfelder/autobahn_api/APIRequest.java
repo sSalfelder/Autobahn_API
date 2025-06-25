@@ -45,7 +45,6 @@ public class APIRequest {
 
     private void handleApiResponse( HttpResponse<String> response) {
         if(response.statusCode()==200) {
-            System.out.println(response.body());
             var roadworkList = parseJson(response.body());
 
             onSuccessCallback.accept(roadworkList);

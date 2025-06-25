@@ -14,6 +14,11 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    //TODO Textarea soll in der Mitte oben losgelöst vom Button auftauchen
+    //TODO Textarea soll transparent wie ein Heads-Up-Display Element sein
+    //TODO Das Click-event soll bei gedrückter Maustaste und verschieben des Buttons
+    // nicht ausgelöst werden
+
     @FXML
     private Button highwayButton;
 
@@ -47,7 +52,7 @@ public class Controller implements Initializable {
         roadworkList.clear();
         roadworkList.addAll(data);
         StringBuilder sb = new StringBuilder();
-        sb.append("Baustellen: \n\n");
+        sb.append("Baustellen auf der A1: \n\n");
 
         for (Roadwork rw : roadworkList) {
             sb.append("Abschnitt: " + rw.getSection() + "\n");
