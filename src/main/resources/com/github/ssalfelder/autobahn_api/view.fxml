@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/21.0.6"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.github.ssalfelder.autobahn_api.Controller"
-      styleClass="root">
-    <Button mnemonicParsing="false" onAction="#onHighwayClicked" styleClass="hud-button" fx:id="highwayButton">
+<VBox alignment="TOP_RIGHT" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ssalfelder.autobahn_api.Controller">
+    <Button fx:id="highwayButton" mnemonicParsing="false" onAction="#onHighwayClicked" styleClass="hud-button">
       <graphic>
-         <ImageView styleClass="hud-image" fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="100" fitWidth="100" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="hud-image">
             <image>
                <Image url="@../../../../autobahn.png" />
             </image>
          </ImageView>
       </graphic></Button>
+   <TextArea fx:id="outputArea" prefHeight="200.0" prefWidth="200.0" />
 </VBox>
