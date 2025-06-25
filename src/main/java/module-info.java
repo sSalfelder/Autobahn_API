@@ -12,6 +12,7 @@ module com.github.ssalfelder.autobahn_api {
     requires com.almasb.fxgl.all;
     requires java.net.http;
     requires json.simple;
+    requires javafx.base;
 
     opens com.github.ssalfelder.autobahn_api to javafx.fxml;
     exports com.github.ssalfelder.autobahn_api;

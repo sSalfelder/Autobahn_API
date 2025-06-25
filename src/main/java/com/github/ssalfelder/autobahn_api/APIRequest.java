@@ -15,8 +15,12 @@ import java.util.function.Consumer;
 
 public class APIRequest {
 
-    private Consumer<ArrayList<Roadwork>> onSucessCallback;
-    private final String URL = "https://verkehr.autobahn.de/o/autobahn/A1/services/roadworks";
+    private Consumer<ArrayList<Roadwork>> onSuccessCallback;
+
+    public void getData(String url, Consumer <ArrayList<Roadwork>> onSuccessCallback) {
+        this.onSuccessCallback = onSuccessCallback;
+        sendRequest(url);
+    }
 
     private void sendRequest( String urlString) {
         try{
@@ -44,7 +48,9 @@ public class APIRequest {
             System.out.println(response.body());
             var roadworkList = parseJson(response.body());
 
-            onSucessCallback.accept(roadworkList);
+            onSuccessCallback.accept(roadworkList);
+
+        } else {
             System.err.println("API response failed: " + response.statusCode());
         }
     }
@@ -58,8 +64,25 @@ public class APIRequest {
             JSONObject jsonObject = (JSONObject)parse.parse(json);
             JSONArray roadworks = (JSONArray)jsonObject.get("roadworks");
 
+            for (var roadwork : roadworks) {
+
+                JSONObject road = (JSONObject)roadwork;
+
+                String section = road.get("title").toString();
+                String direction = road.get("subtitle").toString();
+
+                JSONArray description = (JSONArray)road.get("description");
+                String start = description.get(1).toString();
+                String end = description.get(2).toString();
+
+                Roadwork rw = new Roadwork(section, direction, start, end);
+
+                roadworkList.add(rw);
+            }
+
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+        return roadworkList;
     }
 }

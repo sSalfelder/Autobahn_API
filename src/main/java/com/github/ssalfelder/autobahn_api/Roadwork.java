@@ -2,18 +2,16 @@ package com.github.ssalfelder.autobahn_api;
 
 public class Roadwork {
 
-    private String road;
     private String section;
     private String direction;
     private String start;
     private String end;
 
-    public String getRoad() {
-        return road;
-    }
-
-    public void setRoad(String road) {
-        this.road = road;
+    public Roadwork(String section, String direction, String start, String end) {
+        this.section = section;
+        this.direction = direction;
+        this.start = start;
+        this.end = end;
     }
 
     public String getSection() {
@@ -47,13 +45,4 @@ public class Roadwork {
     public void setEnd(String end) {
         this.end = end;
     }
-
-    public Roadwork(String road, String section, String direction, String start, String end) {
-        this.road = road;
-        this.section = section;
-        this.direction = direction;
-        this.start = start;
-        this.end = end;
-    }
-
 }
